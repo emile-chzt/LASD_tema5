@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/Core/font-awesome.min.css">
   <link rel="stylesheet" href="css/Core/normalize.css">
   <link rel="stylesheet" href="css/Dev/style.css">
+  <link rel="stylesheet" href="css/Dev/style2.css">
 
 
 	<script src="js/Core/openjpeg.js"></script>
@@ -36,6 +37,9 @@
   <div ng-show="selectedDoctor">
 
     <div id="associatedVisits" ng-show="patientData==0">
+      <div class="text_alert" id="error_message_no_studies" ng-show="studiesNotFound==1">
+        No hay datos para este paciente
+      </div>
         <table class="table table-bordered">
             <tr id="headerTable">
                 <td>
@@ -46,6 +50,9 @@
                 </td>
                 <td>
                 Diagnóstico
+                </td>
+                <td>
+                Ver imagenes
                 </td>
             </tr>
             <tr ng-repeat="visit in visits">
@@ -64,6 +71,9 @@
                       <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
                     </span>
                 </td>
+                
+                
+                
             </tr>
         </table>
     </div>
@@ -121,9 +131,7 @@
           </div>
         </div>
 
-        <div id="studieData" ng-show="!studieData.StudyNumber">
-          No hay datos para este paciente
-        </div>
+        
       </div>
 
     

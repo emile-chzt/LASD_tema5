@@ -12,6 +12,7 @@ MyApp.controller("mainController", function ($scope, Doctor) {
   $scope.showImage = 0;
   $scope.urlData;
   $scope.imageData = 0;
+  $scope.studiesNotFound = 0;
 
   Doctor.allDoctors().success(function (data) {
     $scope.doctors = data;
@@ -29,12 +30,20 @@ MyApp.controller("mainController", function ($scope, Doctor) {
     });
   };
   $scope.selectedPatient = function (id) {
-    $scope.patientData = 1;
-
     Doctor.selectedPatient(id).success(function (data) {
       $scope.patient = data.personalData[0];
       $scope.studieData = data.studies[0];
       $scope.seriesData = data.series;
+      console.log($scope.seriesData.length);
+      if ($scope.seriesData.length > 0) {
+        $scope.patientData = 1;
+        $scope.studiesNotFound = 0;
+        console.log("studies found");
+      } else {
+        $scope.studiesNotFound = 1;
+        $scope.patientData = 0;
+        console.log("No studies found for this patient.");
+      }
     });
   };
 
