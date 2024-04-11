@@ -1,5 +1,5 @@
 h1{
-	margin-left:1%;
+	margin-left:45%;
 }
 #doctorSelect{
 	width:30%;
@@ -15,9 +15,9 @@ h1{
 	background-color: #3b83bd;
 }
 #comeBackButton{
-	float:right;
-	margin-right: 50px;
-	margin-top:-30px;
+	float:left;
+	margin-left: 50px;
+	margin-top:-10px;
 }
 #personalData{
 	margin-left:3%;
@@ -85,9 +85,11 @@ h3{
 }
 #urlsList{
 	width:100%;
+	margin-left: 20px;
 }
 #colTitle{
 	float:left;
+	margin-left: 20px;
 }
 #imgTabTitle{
 	height:20px;
