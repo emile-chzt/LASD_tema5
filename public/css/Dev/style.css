@@ -1,5 +1,7 @@
 h1{
 	margin-left:45%;
+	color:#3b83bd;
+	font-weight: bold;
 }
 #doctorSelect{
 	width:30%;
@@ -112,4 +114,10 @@ h3{
 	overflow: hidden;
 	border-bottom: #898888 1px solid;
 	font-size: 12px;
+}
+#doctorSelect{
+	width:30%;
+	margin-left:1%;
+	font: bold 12px/normal 'Times New Roman', Times, serif;
+
 }
